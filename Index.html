@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Video Generator</title>
+</head>
+<body>
+  <h1>🎬 AI Video Generator</h1>
+
+  <textarea id="prompt" placeholder="Describe your video..."></textarea>
+  <br><br>
+
+  <button onclick="generateVideo()">Generate Video</button>
+
+  <p id="status"></p>
+
+  <script>
+    function generateVideo() {
+      const prompt = document.getElementById("prompt").value;
+
+      if (!prompt) {
+        document.getElementById("status").innerText =
+          "Please enter a video prompt.";
+        return;
+      }
+
+      document.getElementById("status").innerText =
+        "Video generation system is starting...";
+    }
+  </script>
+</body>
+</html>
